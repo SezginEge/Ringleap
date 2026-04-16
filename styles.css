@@ -33,77 +33,6 @@ body {
   animation-delay: 0.4s;
 }
 
-.float-drift {
-  animation: float-drift 9s ease-in-out infinite;
-}
-
-.orbit-shell {
-  position: relative;
-  width: min(31rem, 78vw);
-  aspect-ratio: 1 / 1;
-}
-
-.orbit-ring,
-.player-track {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 9999px;
-}
-
-.orbit-ring {
-  border: 1px solid rgba(235, 243, 255, 0.09);
-}
-
-.orbit-ring-outer {
-  width: 100%;
-  height: 100%;
-}
-
-.orbit-ring-second {
-  width: 74%;
-  height: 74%;
-}
-
-.orbit-ring-third {
-  width: 50%;
-  height: 50%;
-}
-
-.orbit-ring-fourth {
-  width: 38%;
-  height: 38%;
-}
-
-.orbit-ring-inner {
-  width: 28%;
-  height: 28%;
-  border-color: rgba(235, 243, 255, 0.52);
-  box-shadow: 0 0 18px rgba(184, 242, 255, 0.08);
-  animation: ring-breathe 4s ease-in-out infinite;
-}
-
-.player-track {
-  width: 28%;
-  height: 28%;
-  transform-origin: center center;
-  animation: spin 6.2s linear infinite;
-}
-
-.player-dot {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 1rem;
-  height: 1rem;
-  background: #b8f2ff;
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  border-radius: 9999px;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 26px rgba(89, 200, 255, 0.45);
-}
-
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -113,45 +42,5 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes float-drift {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-14px);
-  }
-}
-
-@keyframes ring-breathe {
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.78;
-  }
-
-  50% {
-    transform: translate(-50%, -50%) scale(1.02);
-    opacity: 1;
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@media (max-width: 767px) {
-  .orbit-shell {
-    width: min(23rem, 82vw);
   }
 }

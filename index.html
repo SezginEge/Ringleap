@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RingLeap | One-tap iPhone arcade game</title>
+    <meta
+      name="description"
+      content="RingLeap is a minimalist one-tap iPhone arcade game about jumping outward, surviving longer, and beating your best run."
+    />
+    <meta name="theme-color" content="#090c13" />
+    <meta property="og:title" content="RingLeap" />
+    <meta
+      property="og:description"
+      content="One tap. Jump outward. Do not touch the red."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ringleap.app/" />
+    <link rel="canonical" href="https://ringleap.app/" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                ink: "#090c13",
+                mist: "#131a26",
+                line: "rgba(235, 243, 255, 0.12)",
+                ring: "rgba(235, 243, 255, 0.16)",
+                activeRing: "rgba(235, 243, 255, 0.48)",
+                player: "#b8f2ff",
+                glow: "#59c8ff",
+                mint: "#8cf2cc",
+                danger: "#ff3852",
+                textDim: "rgba(235, 243, 255, 0.68)"
+              },
+              fontFamily: {
+                display: ['"Avenir Next"', "Avenir", '"Trebuchet MS"', "sans-serif"],
+                body: ['"Helvetica Neue"', "Arial", "sans-serif"]
+              },
+              boxShadow: {
+                halo: "0 0 80px rgba(89, 200, 255, 0.18)"
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="landing-page bg-ink font-body text-white antialiased">
+    <div class="relative isolate overflow-hidden">
+      <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top,_rgba(19,26,38,1),_rgba(9,12,19,1)_55%)]"></div>
+      <div class="absolute left-1/2 top-0 -z-10 h-[38rem] w-[38rem] -translate-x-1/2 rounded-full bg-glow/10 blur-3xl"></div>
+      <div class="absolute right-[-8rem] top-[12rem] -z-10 h-[22rem] w-[22rem] rounded-full bg-danger/10 blur-3xl"></div>
+
+      <header class="absolute inset-x-0 top-0 z-20">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 md:px-10">
+          <a class="font-display text-sm tracking-[0.45em] text-white" href="index.html">RINGLEAP</a>
+          <nav class="flex items-center gap-4 text-[0.68rem] uppercase tracking-[0.28em] text-slate-300 md:gap-6">
+            <a class="transition hover:text-white" href="#support">Support</a>
+            <a class="transition hover:text-white" href="privacy.html">Privacy</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="relative">
+          <div class="mx-auto grid min-h-screen max-w-6xl items-center gap-14 px-6 pb-16 pt-28 md:px-10 lg:grid-cols-[minmax(0,31rem)_1fr] lg:pt-24">
+            <div class="max-w-xl">
+              <p class="fade-up text-[0.7rem] uppercase tracking-[0.38em] text-mint/80">iPhone arcade</p>
+              <h1 class="fade-up delay-1 mt-5 font-display text-5xl tracking-[0.18em] text-white sm:text-6xl lg:text-7xl">
+                RINGLEAP
+              </h1>
+              <p class="fade-up delay-2 mt-6 max-w-md text-xl leading-8 text-white/90 sm:text-2xl">
+                One tap. Jump outward. Do not touch the red.
+              </p>
+              <p class="fade-up delay-3 mt-6 max-w-lg text-sm leading-7 text-textDim sm:text-base">
+                RingLeap is a minimalist portrait game built around quick runs, clean motion, and the pressure of making one more perfect jump.
+              </p>
+              <div class="fade-up delay-4 mt-9 flex flex-wrap gap-3">
+                <a
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white px-5 py-3 text-sm font-medium text-ink transition hover:-translate-y-0.5 hover:bg-mint"
+                  href="#support"
+                >
+                  Support
+                </a>
+                <a
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/5"
+                  href="privacy.html"
+                >
+                  Privacy policy
+                </a>
+              </div>
+              <p class="fade-up delay-4 mt-8 max-w-lg text-xs uppercase tracking-[0.28em] text-slate-400">
+                Optional Game Center leaderboard. Ads powered by Google AdMob. Remove ads with a one-time Apple in-app purchase.
+              </p>
+            </div>
+
+            <div class="flex justify-center lg:justify-end">
+              <div class="orbit-shell float-drift">
+                <div class="orbit-ring orbit-ring-outer"></div>
+                <div class="orbit-ring orbit-ring-middle"></div>
+                <div class="orbit-ring orbit-ring-inner"></div>
+                <div class="orbit-glow orbit-glow-a"></div>
+                <div class="orbit-glow orbit-glow-b"></div>
+                <div class="hazard-arc hazard-arc-a"></div>
+                <div class="hazard-arc hazard-arc-b"></div>
+                <div class="orbit-track orbit-track-a">
+                  <span class="orbit-satellite orbit-satellite-a"></span>
+                </div>
+                <div class="orbit-track orbit-track-b">
+                  <span class="orbit-satellite orbit-satellite-b"></span>
+                </div>
+                <div class="orbit-track orbit-track-c">
+                  <span class="orbit-satellite orbit-satellite-c"></span>
+                </div>
+                <div class="player-track">
+                  <span class="player-dot"></span>
+                </div>
+                <div class="center-core shadow-halo"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="border-t border-white/10">
+          <div class="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
+            <div class="grid gap-10 md:grid-cols-3 md:gap-8">
+              <article class="border-t border-line pt-5">
+                <p class="text-[0.65rem] uppercase tracking-[0.34em] text-mint/75">01</p>
+                <h2 class="mt-3 font-display text-2xl text-white">Clear loop</h2>
+                <p class="mt-4 text-sm leading-7 text-textDim">
+                  Jump to the next ring, land in the safe gap, and stay ahead of the pressure. The rules stay simple so the timing can stay sharp.
+                </p>
+              </article>
+
+              <article class="border-t border-line pt-5">
+                <p class="text-[0.65rem] uppercase tracking-[0.34em] text-mint/75">02</p>
+                <h2 class="mt-3 font-display text-2xl text-white">Quick portrait runs</h2>
+                <p class="mt-4 text-sm leading-7 text-textDim">
+                  Built for iPhone with one-tap control, instant restarts, and a visual style that stays readable even when the game speeds up.
+                </p>
+              </article>
+
+              <article class="border-t border-line pt-5">
+                <p class="text-[0.65rem] uppercase tracking-[0.34em] text-mint/75">03</p>
+                <h2 class="mt-3 font-display text-2xl text-white">No extra clutter</h2>
+                <p class="mt-4 text-sm leading-7 text-textDim">
+                  No account system, no custom profiles, and no analytics from the developer. Your best score and settings stay on your device.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="border-t border-white/10">
+          <div class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:px-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-end">
+            <div>
+              <p class="text-[0.7rem] uppercase tracking-[0.38em] text-mint/80">Built to stay simple</p>
+              <h2 class="mt-4 max-w-xl font-display text-3xl text-white sm:text-4xl">
+                RingLeap keeps the focus on timing, motion, and chasing one better run.
+              </h2>
+            </div>
+
+            <div id="support" class="border-t border-line pt-5 lg:justify-self-end lg:max-w-md">
+              <p class="text-[0.65rem] uppercase tracking-[0.34em] text-slate-400">Support</p>
+              <p class="mt-4 text-sm leading-7 text-textDim">
+                For support, store questions, or privacy requests, email
+                <a class="text-white underline decoration-white/30 underline-offset-4 transition hover:decoration-white" href="mailto:sezginege.mail@gmail.com">
+                  sezginege.mail@gmail.com
+                </a>.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/5"
+                  href="mailto:sezginege.mail@gmail.com"
+                >
+                  Email support
+                </a>
+                <a
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/5"
+                  href="privacy.html"
+                >
+                  Read privacy policy
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/10">
+        <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-xs uppercase tracking-[0.24em] text-slate-500 md:flex-row md:items-center md:justify-between md:px-10">
+          <p>RingLeap for iPhone</p>
+          <div class="flex items-center gap-4">
+            <a class="transition hover:text-white" href="privacy.html">Privacy</a>
+            <a class="transition hover:text-white" href="mailto:sezginege.mail@gmail.com">Support</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

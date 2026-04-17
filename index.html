@@ -66,16 +66,16 @@
 
       <main>
         <section class="relative">
-          <div class="mx-auto flex min-h-screen max-w-6xl items-center px-6 pb-16 pt-28 md:px-10 lg:pt-24">
-            <div class="max-w-5xl lg:max-w-[62rem]">
+          <div class="mx-auto grid min-h-screen max-w-6xl items-center gap-12 px-6 pb-16 pt-28 md:px-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,420px)] lg:gap-14 lg:pt-24">
+            <div class="max-w-3xl">
               <p class="fade-up text-[0.7rem] uppercase tracking-[0.38em] text-mint/80">iPhone arcade</p>
               <h1 class="fade-up delay-1 mt-5 font-display text-5xl tracking-[0.18em] text-white sm:text-6xl lg:text-7xl">
                 RINGLEAP
               </h1>
-              <p class="fade-up delay-2 mt-6 max-w-4xl text-2xl leading-9 text-white/90 sm:text-3xl sm:leading-[1.35] lg:text-[2.35rem]">
+              <p class="fade-up delay-2 mt-6 max-w-3xl text-2xl leading-9 text-white/90 sm:text-3xl sm:leading-[1.35] lg:text-[2.25rem]">
                 A fast one-tap arcade game about timing perfect jumps and holding on for one more run.
               </p>
-              <p class="fade-up delay-3 mt-6 max-w-4xl text-sm leading-7 text-textDim sm:text-base lg:max-w-5xl">
+              <p class="fade-up delay-3 mt-6 max-w-3xl text-sm leading-7 text-textDim sm:text-base">
                 Tap to leap to the next ring, thread the safe gap, and keep your streak alive as the pace tightens. RingLeap is built for quick portrait play, instant restarts, and that clean just-one-more-try feeling.
               </p>
               <div class="fade-up delay-4 mt-9 flex flex-wrap gap-4">
@@ -100,6 +100,32 @@
                   </span>
                 </a>
               </div>
+            </div>
+
+            <div class="fade-up delay-3 mx-auto w-full max-w-[21rem] lg:justify-self-end">
+              <div class="relative">
+                <div class="absolute -inset-6 rounded-[3rem] bg-[radial-gradient(circle,_rgba(89,200,255,0.18),_rgba(89,200,255,0)_62%)] blur-2xl"></div>
+                <div class="relative rounded-[2.75rem] border border-white/15 bg-white/5 p-2 shadow-[0_28px_90px_rgba(0,0,0,0.38)] backdrop-blur-sm">
+                  <div class="relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-black">
+                    <div class="absolute left-1/2 top-3 z-10 h-6 w-28 -translate-x-1/2 rounded-full border border-white/10 bg-black/85"></div>
+                    <video
+                      class="block w-full aspect-[886/1920] object-cover"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      poster="gameplay-poster.jpg"
+                      aria-label="RingLeap gameplay preview"
+                    >
+                      <source src="gameplay-web.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">
+                Real gameplay capture
+              </p>
             </div>
           </div>
         </section>
